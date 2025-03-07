@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="container mt-5">
+    <div class="container mt-4 mb-4">
         {% load static %}
         <img src="{% static 'logo.png' %}" alt="Logo">
         <h1 class="text-center">Registrar Clientes</h1>
@@ -22,12 +22,20 @@
                     <input type="text" name="nombre" class="form-control" required>
                 </div>
                 <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" name="apellido" class="form-control" required>
+                </div>
+                <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
                     <input type="email" name="correo" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono</label>
                     <input type="text" name="telefono" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" name="direccion" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-dark">Guardar</button>
             </form>

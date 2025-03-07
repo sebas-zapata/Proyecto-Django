@@ -76,11 +76,17 @@ WSGI_APPLICATION = 'mi_proyecto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # Usar MySQL en vez de SQLite
+        'NAME': 'Django',  # Nombre de la base de datos
+        'USER': 'root',  # Usuario de MySQL (cambia si tienes otro)
+        'PASSWORD': '',  # Pon tu contraseña si tienes una
+        'HOST': '127.0.0.1',  # Servidor local
+        'PORT': '3306',  # Puerto por defecto de MySQL
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 
 <body class="bg-light">
     {% block content %}
-    <div class="container mt-5">
+    <div class="container mt-4 mb-4">
         {% load static %}
         <img src="{% static 'logo.png' %}" alt="Logo">
         <h1 class="text-center">Editar Cliente</h1>
@@ -23,12 +23,20 @@
                     {{ form.nombre }}
                 </div>
                 <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    {{ form.apellido }}
+                </div>
+                <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
                     {{ form.correo }}
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Teléfono</label>
                     {{ form.telefono }}
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    {{ form.direccion }}
                 </div>
                 <button type="submit" class="btn btn-dark">Guardar Cambios</button>
                 <a href="{% url 'lista_clientes' %}" class="btn btn-secondary">Cancelar</a>
